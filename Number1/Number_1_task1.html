@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const existsUserLogin = "the_best_user";
+        const existsUserPassword = "12345678";
+
+        const userLogin = prompt("Enter login").trim();
+        const userPassword = prompt("Enter password").trim();
+
+        if (userLogin === existsUserLogin && userPassword === existsUserPassword) {
+            alert(`Welcome, ${userLogin}!`);
+        } else {
+            alert("Login and (or) Password entered incorrectly!");
+        }
+    </script>
+</body>
+
+</html>

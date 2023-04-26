@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const peopleWaiting = ['Kristina', 'Oleg', 'Kirill', 'Maria', 'Svetlana', 'Artem', 'Gleb'];
+
+        function giveParcel() {
+            const nextPerson = peopleWaiting.shift();
+            if (nextPerson) {
+                const numPeopleLeft = peopleWaiting.length;
+                alert(`${nextPerson} received the package. There are ${numPeopleLeft} people left in the queue.`);
+            } else {
+                alert('No more people in the queue.');
+            }
+        }
+
+        function leaveQueueWithoutParcel() {
+            const kirillIndex = peopleWaiting.indexOf('Kirill');
+            if (kirillIndex !== -1) {
+                const peopleLeft = peopleWaiting.splice(kirillIndex + 1);
+                const numPeopleLeft = peopleWaiting.length;
+                alert(`Kirill received the package. There are ${numPeopleLeft} people left in the queue.`);
+                if (peopleLeft.length > 0) {
+                    alert(`${peopleLeft.join(', ')} did not receive the package and left the queue.`);
+                }
+            } else {
+                alert('Kirill is not in the queue.');
+            }
+        }
+
+        giveParcel();
+        giveParcel();
+        leaveQueueWithoutParcel();
+        giveParcel();
+
+    </script>
+</body>
+
+</html>

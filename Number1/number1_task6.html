@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let clientName = prompt("Enter the client's name");
+        let clientSpentToday = parseFloat(prompt("How much did the client spend today?"));
+        let clientSpentForAllTime = parseFloat(prompt("How much did the client spend all time?"));
+
+        if (isNaN(clientSpentToday) || isNaN(clientSpentForAllTime)) {
+            alert("The amount that the client spent all time and spent today must be a number! Please reload the page to try again.");
+        } else {
+            // Calculate discount and update variables
+            let discount = 0;
+            let totalSpent = clientSpentToday + clientSpentForAllTime;
+
+            if (totalSpent >= 100 && totalSpent < 300) {
+                discount = 10;
+            } else if (totalSpent >= 300 && totalSpent < 500) {
+                discount = 20;
+            } else if (totalSpent >= 500) {
+                discount = 30;
+            }
+
+            let payable = clientSpentToday * (1 - discount / 100);
+            clientSpentForAllTime += clientSpentToday;
+
+            // Display invoice
+            alert(`Thank you, ${clientName}! Payable ${payable}$. For all the time in our restaurant you spent ${clientSpentForAllTime}$. You are given a discount in ${discount}%.`);
+        }
+
+    </script>
+</body>
+
+</html>

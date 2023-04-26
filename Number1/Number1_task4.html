@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let correctAnswers = 0;
+        let incorrectAnswers = 0;
+
+        function hint(question) {
+            let answer = prompt(question);
+            if (answer == eval(question)) {
+                alert("Correct answer!");
+                correctAnswers++;
+            } else {
+                alert("Incorrect answer.");
+                incorrectAnswers++;
+            }
+        }
+
+        hint("What's 2 + 2?");
+        hint("How much will 2 * 2 be?");
+        hint("Petya had 5 apples. He ate 3 of them and gave 1 to a friend. How many apples does Peter have left?");
+        hint("Masha had 10 sweets. She ate 2 and gave 1 to a friend. After that, mom gave Masha 5 more sweets. How many sweets did Masha have left in the end?");
+        hint("What is 2 + 2 * 2?");
+
+        alert(`End of test! Correct answers - ${correctAnswers}; Wrong answers - ${incorrectAnswers}.`);
+
+    </script>
+</body>
+
+</html>

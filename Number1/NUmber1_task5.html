@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let clientName = "Igor";
+        let clientSpentForAllTime = 110;
+        let clientSpentToday = 25;
+
+        let totalSpent = clientSpentForAllTime + clientSpentToday;
+        let discount = 0;
+
+        if (totalSpent >= 100 && totalSpent < 300) {
+            discount = 10;
+        } else if (totalSpent >= 300 && totalSpent < 500) {
+            discount = 20;
+        } else if (totalSpent >= 500) {
+            discount = 30;
+        }
+
+        clientSpentForAllTime += clientSpentToday * (1 - discount / 100);
+
+        alert(`You are given a discount in ${discount}%!`);
+
+        alert(`Thank you, ${clientName}! Payable ${clientSpentToday * (1 - discount / 100)}$. For all the time in our restaurant you spent ${clientSpentForAllTime}$.`);
+
+    </script>
+</body>
+
+</html>

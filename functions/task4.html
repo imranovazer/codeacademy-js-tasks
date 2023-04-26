@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const checkQuestionAnswer = (question, correctAnswer) => {
+            const userAnswer = prompt(question).trim().toLowerCase();
+            const normalizedAnswer = correctAnswer.trim().toLowerCase();
+            if (userAnswer === normalizedAnswer || (userAnswer === 'apple' && normalizedAnswer === 'apple')) {
+                alert('The answer is correct');
+            } else {
+                alert('The answer is incorrect');
+            }
+        };
+
+        // Testing the function
+        checkQuestionAnswer('Is the watermelon a fruit or a berry?', 'A berry');
+        checkQuestionAnswer('How many teeth does an average adult have?', '32');
+        checkQuestionAnswer('What is the name of the smallest bird in the world?', 'Hummingbird');
+
+    </script>
+</body>
+
+</html>

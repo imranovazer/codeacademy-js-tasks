@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const coffees = ['Latte', 'Cappuccino', 'Americano'];
+        const prices = [1.5, 1, 2];
+
+        const updatedPrices = prices.map(price => price + 0.5);
+
+        coffees.forEach((coffee, index) => {
+            const price = updatedPrices[index];
+            alert(`${coffee} is now worth ${price} euro`);
+        });
+
+    </script>
+</body>
+
+</html>
